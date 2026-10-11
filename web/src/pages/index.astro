@@ -1,40 +1,115 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+const initialTools = [
+  {
+    id: "markdown-to-pdf",
+    path: "/markdown-to-pdf/",
+    name: "MarkForge",
+    tagline: "Markdown → HTML → PDF",
+    description:
+      "Live Markdown preview, custom CSS styling, real-time page-break view, and instant PDF export.",
+    status: "live",
+  },
+  {
+    id: "link-shortener",
+    path: "/link-shortener/",
+    name: "Link Shortener",
+    tagline: "Short links that expire",
+    description:
+      "Create fast short URLs with selectable lifetime - from 15 minutes to 30 days. Default 3 days.",
+    status: "live",
+  },
+];
 ---
 
-<Layout title="Mausam Giri Tools — Free Online Utilities">
-  <div class="page">
-    <header class="site-header">
+<Layout title="Mausam Giri Tools - Industrial Obsidian Utilities">
+  <link rel="stylesheet" href="/static/home.css" />
+
+  <header class="site-header">
+    <div class="wrap header-inner">
       <a class="logo" href="/" aria-label="Mausam Giri Tools home">
         <span class="logo-mark" aria-hidden="true">MG</span>
         <span class="logo-text">
-          <strong>Mausam Giri</strong>
-          <span>Tools</span>
+          <strong>MAUSAM GIRI</strong>
+          <span>TOOLS CONSOLE</span>
         </span>
       </a>
-      <a class="site-link" href="https://mausamgiri.in/" rel="me noopener">mausamgiri.in</a>
-    </header>
+      <div class="header-right">
+        <span class="status-indicator">
+          <span class="status-dot"></span>
+          SYSTEM ONLINE
+        </span>
+        <a
+          class="site-link"
+          href="https://mausamgiri.in/"
+          rel="me noopener"
+          target="_blank">mausamgiri.in ↗</a
+        >
+      </div>
+    </div>
+  </header>
 
+  <div class="wrap page-container">
     <main>
-      <section class="hero">
-        <p class="hero-kicker">tools.mausamgiri.in</p>
-        <h1>Tools that stay out of the way</h1>
-        <p class="hero-lead">Small browser utilities — fast, free, no account required.</p>
+      <section class="hero-section">
+        <div class="hero-badge">CONSOLE v1.0 // HIGH-PRECISION UTILITIES</div>
+        <h1 class="hero-title">TOOLS THAT STAY OUT OF YOUR WAY</h1>
+        <p class="hero-lead">
+          Client-side processing, zero tracking, instant execution.
+          Production-grade utilities for developers & creators.
+        </p>
       </section>
 
-      <section class="tools" aria-labelledby="tools-heading">
-        <div class="tools-head">
-          <h2 id="tools-heading">Available tools</h2>
-          <p>Pick a tool to open it. New ones appear here as they ship.</p>
+      <section class="tools-section" aria-labelledby="tools-heading">
+        <div class="section-header">
+          <h2 id="tools-heading" class="section-kicker">AVAILABLE UTILITIES</h2>
+          <span class="section-count">{initialTools.length} MODULES READY</span>
         </div>
+
         <div id="tools-grid" class="tools-grid" aria-live="polite">
-          <p class="tools-loading">Loading tools…</p>
+          {
+            initialTools.map((tool) => (
+              <a
+                href={tool.path}
+                class="card-item tool-card"
+                aria-label={`Open ${tool.name}`}
+              >
+                <div class="tool-card-header">
+                  <span class="project-pill">{tool.id}</span>
+                  <span class="status-tag">LIVE</span>
+                </div>
+                <div class="tool-card-body">
+                  <h3 class="tool-title">
+                    {tool.name}
+                    <span class="external-indicator" aria-hidden="true">
+                      ↗
+                    </span>
+                  </h3>
+                  <p class="tool-tagline">{tool.tagline}</p>
+                  <p class="tool-desc">{tool.description}</p>
+                </div>
+                <div class="tool-card-footer">
+                  <span class="project-link-btn">
+                    LAUNCH TOOL <span aria-hidden="true">→</span>
+                  </span>
+                </div>
+              </a>
+            ))
+          }
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Built by <a href="https://mausamgiri.in/" rel="me">Mausam Giri</a></p>
+      <div class="footer-inner">
+        <p>
+          BUILT BY <a href="https://mausamgiri.in/" rel="me" target="_blank"
+            >MAUSAM GIRI</a
+          > &bull; INDUSTRIAL OBSIDIAN DESIGN
+        </p>
+        <p class="footer-meta">FAST &bull; SECURE &bull; LOCAL-FIRST</p>
+      </div>
     </footer>
   </div>
 

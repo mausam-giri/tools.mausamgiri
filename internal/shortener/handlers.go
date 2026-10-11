@@ -98,7 +98,7 @@ func (h *Handler) create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if errors.Is(err, ErrLimit) {
-		writeErr(w, http.StatusTooManyRequests, "limit reached: max 10 active links per device/IP — delete one or wait for expiry")
+		writeErr(w, http.StatusTooManyRequests, "limit reached: max 10 active links per device/IP - delete one or wait for expiry")
 		return
 	}
 	if err != nil {

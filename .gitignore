@@ -11,3 +11,4 @@
 .DS_Store
 *.err
 *.log
+node_modules

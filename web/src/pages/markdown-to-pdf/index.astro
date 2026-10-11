@@ -1,11 +1,58 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import MarkforgeApp from '../../components/MarkforgeApp.astro';
+import Layout from "../../layouts/Layout.astro";
+import MarkforgeApp from "../../components/MarkforgeApp.astro";
 ---
 
 <Layout
-  title="MarkForge — Free Markdown to PDF Converter | Mausam Giri Tools"
+  title="MarkForge - Free Markdown to PDF Converter | Mausam Giri Tools"
   description="Convert Markdown to HTML and PDF in your browser. Live preview, custom CSS, real-time page-break simulation, and instant PDF export."
 >
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown-light.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/addon/hint/show-hint.min.css"
+  />
+  <link rel="stylesheet" href="/markdown-to-pdf/static/app.css" />
+
   <MarkforgeApp />
+
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/css/css.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/addon/hint/show-hint.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/addon/hint/css-hint.min.js"
+    defer></script>
+  <script
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/addon/edit/closebrackets.min.js"
+    defer></script>
 </Layout>
