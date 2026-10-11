@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Link Shortener — Mausam Giri Tools</title>
-  <meta name="description" content="Fast link shortener with selectable expiry. Links auto-expire in 3 days by default." />
+  <title>Link Shortener - Mausam Giri Tools</title>
+  <meta name="description"
+    content="Fast link shortener with selectable expiry. Links auto-expire in 3 days by default." />
   <meta name="theme-color" content="#0d7a6f" />
   <link rel="canonical" href="https://tools.mausamgiri.in/link-shortener/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="static/app.css" />
 </head>
+
 <body>
   <div class="page">
     <header class="top">
@@ -28,12 +33,14 @@
 
     <main class="card">
       <h1>Shorten a link</h1>
-      <p class="lead">Paste a URL, pick how long it should live, and copy the short link. Default life is <strong>3 days</strong>. No login — this browser can keep up to <strong>10</strong> active links.</p>
+      <p class="lead">Paste a URL, pick how long it should live, and copy the short link. Default life is <strong>3
+          days</strong>. No login - this browser can keep up to <strong>10</strong> active links.</p>
 
       <form id="form" autocomplete="off">
         <label class="field">
           <span>URL to shorten</span>
-          <input id="url" name="url" type="url" inputmode="url" placeholder="https://example.com/very/long/path" required />
+          <input id="url" name="url" type="url" inputmode="url" placeholder="https://example.com/very/long/path"
+            required />
         </label>
 
         <fieldset class="ttl">
@@ -84,9 +91,10 @@
         <button type="button" class="ghost" id="refresh-saved">Refresh</button>
       </div>
       <ul id="saved-list" class="saved-list"></ul>
-      <p id="saved-empty" class="saved-empty">No active links yet. Create one above — it will show up here.</p>
+      <p id="saved-empty" class="saved-empty">No active links yet. Create one above - it will show up here.</p>
     </section>
   </div>
   <script src="static/app.js"></script>
 </body>
+
 </html>
